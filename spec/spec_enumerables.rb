@@ -2,12 +2,12 @@
 require_relative '../enumerable'
 
 describe Enumerable do
-  arr1 = [1, 2, 5, 7, 9]
-  arr2 = ['hi', 'hello', 'bybye', true, false]
-  arr3 = %w[Sharon Leo Leila Brian Arun]
-  arr4 = %w[ant bear cat]
-  map_arr = ['small Pizza', 'small garlic bread', 'small milkshake']
-  test_proc = proc { |i| i * i }
+  let(:arr1) { [1, 2, 5, 7, 9] }
+  let(:arr2) { ['hi', 'hello', 'bybye', true, false] }
+  let(:arr3) { %w[Sharon Leo Leila Brian Arun] }
+  let(:arr4) { %w[ant bear cat] }
+  let(:map_arr) { ['small Pizza', 'small garlic bread', 'small milkshake'] }
+  let(:test_proc) { proc { |i| i * i } }
 
   describe '#my_each' do
     it 'in this it should return  ' do
