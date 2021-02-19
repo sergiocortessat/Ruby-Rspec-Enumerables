@@ -35,7 +35,7 @@ describe Enumerable do
     end
   end
 
-  describe '#my_all' do
+  describe '#my_all?' do
     it 'It should return true as all the elemnts inside comply with the condition' do
       expect(arr4.my_all? { |x| x.length >= 2 }).to be true
     end
@@ -46,6 +46,20 @@ describe Enumerable do
 
     it 'It should return false as all the elemnts inside are not of the type String' do
       expect([1, 2i, 3.14].my_all?(String)).to be false
+    end
+  end
+
+  describe '#my_any?' do
+    it 'It should return true as one of the elemnts inside comply with the condition' do
+      expect(arr4.my_any? { |x| x.length >= 3 }).to be true
+    end
+
+    it 'It should return false as any elemnts inside has a true value  tocomply with the condition' do
+      expect(arr4.my_any? { |x| x.length >= 7 }).to be false
+    end
+
+    it 'It should return false as an empty array does not compute to any true value' do
+      expect([].my_any?).not_to be true
     end
   end
 end
