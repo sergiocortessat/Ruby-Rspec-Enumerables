@@ -6,6 +6,9 @@ describe Enumerable do
   arr2 = ['hi', 'hello', 'bybye', true, false]
   arr3 = %w[Sharon Leo Leila Brian Arun]
   arr4 = %w[ant bear cat]
+  map_arr = ['small Pizza', 'small garlic bread', 'small milkshake']
+  test_proc = proc { |i| i * i }
+
   describe '#my_each' do
     it 'in this it should return  ' do
       expect(arr1.my_each { |x| }).to eql([1, 2, 5, 7, 9])
@@ -65,35 +68,46 @@ describe Enumerable do
 
   describe '#my_none?' do
     it 'It should return true as none of the elemnts inside comply with the condition' do
-        expect(arr4.my_none? { |x| x.length >= 5 }).to be true
-      end
-  
-      it 'It should return false as one of  elemnts inside has a true value  to comply with the condition' do
-        expect(arr4.my_none? { |x| x.length >= 4 }).to be false
-      end
-  
-      it 'It should return true as none  of the element are integer' do
-        expect(arr4.my_none?(Integer)).to be true
-      end
-      it 'It should return true as none  of the element are integer' do
-        expect([nil, false, true].my_none?).to be false
-      end
+      expect(arr4.my_none? { |x| x.length >= 5 }).to be true
+    end
+
+    it 'It should return false as one of  elemnts inside has a true value  to comply with the condition' do
+      expect(arr4.my_none? { |x| x.length >= 4 }).to be false
+    end
+
+    it 'It should return true as none  of the element are integer' do
+      expect(arr4.my_none?(Integer)).to be true
+    end
+    it 'It should return true as none  of the element are integer' do
+      expect([nil, false, true].my_none?).to be false
+    end
   end
 
   describe '#my_count' do
     it 'It should return the number of element ' do
-        expect(arr2.my_count).to eql(5)
-      end
+      expect(arr2.my_count).to eql(5)
+    end
 
-      it ' It should return count if it is even element' do
-     expect(arr1.my_count{ |x| (x % 2).zero? }).to eql(3)
+    it ' It should return count if it is even element' do
+      expect(arr1.my_count { |x| (x % 2).zero? }).to eql(1)
+    end
 
-    
+    it ' It should return 1 as there is one Leo in the list' do
+      expect(arr3.my_count('Leo')).to eql(1)
+    end
+  end
+
+  describe '#my_map' do
+    it 'It should return the map_array with modified size to large ' do
+      expect(map_arr.my_map {|x| x.gsub('small', 'large')}).to eql(['large Pizza', 'large garlic bread', 'large milkshake'])
+    end
+
+    it ' It should return the modified array with numbers multiply i*i' do
+      expect(arr1.my_map(test_proc) { |i| i }).to eql([1, 4, 25, 49, 81])
+    end
+
+    it ' It should return the modified array with numnbers sum +10' do
+      expect(arr1.my_map{|x| x+10}).to eql([11, 12, 15, 17, 19])
+    end
   end
 end
-
-
-
-  
-end
-
