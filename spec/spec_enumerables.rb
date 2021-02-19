@@ -99,7 +99,9 @@ describe Enumerable do
 
   describe '#my_map' do
     it 'It should return the map_array with modified size to large ' do
-      expect(map_arr.my_map {|x| x.gsub('small', 'large')}).to eql(['large Pizza', 'large garlic bread', 'large milkshake'])
+      expect(map_arr.my_map do |x|
+               x.gsub('small', 'large')
+             end).to eql(['large Pizza', 'large garlic bread', 'large milkshake'])
     end
 
     it ' It should return the modified array with numbers multiply i*i' do
@@ -107,7 +109,7 @@ describe Enumerable do
     end
 
     it ' It should return the modified array with numnbers sum +10' do
-      expect(arr1.my_map{|x| x+10}).to eql([11, 12, 15, 17, 19])
+      expect(arr1.my_map { |x| x + 10 }).to eql([11, 12, 15, 17, 19])
     end
   end
 end

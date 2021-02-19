@@ -128,7 +128,6 @@ def multiply_els(par)
   par.my_inject(1) { |a, b| a * b }
 end
 
-
 # puts '1.--------my_each--------'
 # %w[Sharon Leo Leila Brian Arun].my_each { |friend| puts friend }
 
@@ -187,4 +186,3 @@ end
 
 # puts 'multiply_els'
 # puts multiply_els([2, 4, 5]) #=> 40
-
