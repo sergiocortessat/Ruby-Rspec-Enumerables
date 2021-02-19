@@ -3,7 +3,7 @@
 ## Table of Contents
 
 * [About the Project](#about-the-project)
-  * [Built With](#built-with)
+* [Built With](#built-with)
 * [Contributing](#contributing)
 * [Contact](#contact)
 * [Acknowledgements](#acknowledgements)
@@ -15,11 +15,15 @@
 In this project, we develop the already existing Ruby enumerable methods such as #each and many others, using our existing knowledge of important concepts in Ruby. 
 
 ## Screenshot
-- testing
 
-![enumerable_shot](https://user-images.githubusercontent.com/11162987/108513902-3ef7ea00-72d4-11eb-8ba7-c9028507f82f.PNG)
+<p align="center">
+  <img height="auto" src="https://user-images.githubusercontent.com/11162987/108513902-3ef7ea00-72d4-11eb-8ba7-c9028507f82f.PNG">
+</p>
 
-![Screenshot]()
+<p align="center">
+<img height="auto" src="rspec_enumerables.gif">
+</p>
+
 ### Built With
 
 * [RUBY](https://github.com/billodiallo/project2-enumerable/tree/feature-enum)
