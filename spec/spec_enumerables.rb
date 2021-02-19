@@ -62,4 +62,38 @@ describe Enumerable do
       expect([].my_any?).not_to be true
     end
   end
+
+  describe '#my_none?' do
+    it 'It should return true as none of the elemnts inside comply with the condition' do
+        expect(arr4.my_none? { |x| x.length >= 5 }).to be true
+      end
+  
+      it 'It should return false as one of  elemnts inside has a true value  to comply with the condition' do
+        expect(arr4.my_none? { |x| x.length >= 4 }).to be false
+      end
+  
+      it 'It should return true as none  of the element are integer' do
+        expect(arr4.my_none?(Integer)).to be true
+      end
+      it 'It should return true as none  of the element are integer' do
+        expect([nil, false, true].my_none?).to be false
+      end
+  end
+
+  describe '#my_count' do
+    it 'It should return the number of element ' do
+        expect(arr2.my_count).to eql(5)
+      end
+
+      it ' It should return count if it is even element' do
+     expect(arr1.my_count{ |x| (x % 2).zero? }).to eql(3)
+
+    
+  end
 end
+
+
+
+  
+end
+
