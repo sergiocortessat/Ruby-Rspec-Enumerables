@@ -112,4 +112,28 @@ describe Enumerable do
       expect(arr1.my_map { |x| x + 10 }).to eql([11, 12, 15, 17, 19])
     end
   end
+
+  describe '#my_inject' do
+    it 'It should return the total sum of of i[n] + i[n+1] of the array' do
+      expect(arr1.my_inject { |x, y| x * y }).to eql(630)
+    end
+
+    it 'It should return the longest string in the array' do
+      expect(arr4.my_inject { |memo, word| memo.length > word.length ? memo : word }).to eql('bear')
+    end
+
+    it 'It should return 1 as 1 to the power of anything is equal to 1' do
+      expect(arr1.my_inject { |z, w| z**w }).to eql(1)
+    end
+  end
+
+  describe '#multiply_els' do
+    it 'It should return the total multiplication of i[n] * i[n+1] of the array' do
+      expect(multiply_els([1, 2, 4])).to eql(8)
+    end
+
+    it 'It should return the total multiplication of i[n] * i[n+1] of the array' do
+      expect(multiply_els([3, 5, 8])).to eql([3, 5, 8].inject { |a, b| a * b })
+    end
+  end
 end
