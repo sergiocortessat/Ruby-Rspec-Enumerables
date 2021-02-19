@@ -22,10 +22,6 @@ describe Enumerable do
     it ' this test case return an array' do
       expect(arr1.my_each_with_index { |x| }).to eql(arr1)
     end
-    # it ' this should print an even ' do
-    # expect(arr3.my_each_with_index { |x, y| x if y%2 == 0 }).to eql(['Sharon','Leila',
-    #     'Arun'])
-    # end
   end
 
   describe '#my_select' do
