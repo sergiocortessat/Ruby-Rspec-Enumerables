@@ -25,10 +25,31 @@ This is an example of how you may give instructions on setting up your project l
 
 - To get a local copy up and running follow these simple example steps.
 
-- Clone this repository with git clone ```https://github.com/billodiallo/project2-enumerable.git``` using your terminal or command line.
+- Clone this repository with git clone ```https://github.com/sergiocortessat/Ruby-Rspec-Enumerables.git``` using your terminal or command line.
 - Change to the project directory by entering :
-```cd project2-enumerable``` in the terminal .
-- run the command ```ruby project2-enumerable```
+```cd Ruby-Rspec-Enumerables``` in the terminal .
+- run the command ```ruby Ruby-Rspec-Enumerables```
+
+## Prequisites
+
+Ruby installed on your local machine.
+Terminal or similar to execute the program.
+
+## Testing
+In this project the testing was done using RSpec to test all enumerable  methods.
+
+## Install
+- In a terminal window type gem install rspec
+- Once rspec install has finished, type rspec --init
+- You will see a folder spec and a file .rspec
+- Inside spec folder you'll see a spec_helper.rb file.
+
+## Run
+We have already created rspec-testing files called logic.rb, and settings.rb.
+- go to the folder inside your terminal type rspec
+- If all test pass you will see:
+ `26 examples, 0 failures` for spec_enumerable.rb
+ 
 <!-- CONTACT -->
 ## Contact
 
@@ -40,11 +61,12 @@ This is an example of how you may give instructions on setting up your project l
 - Twitter: [@BilloDi83547008](https://twitter.com/BilloDi83547008)
 - Linkedin:[@mabillodiallo](https://www.linkedin.com/in/mabillodiallo/)
 
+👤 Sergio Cortes Satizabal
 
-👤 **Elvis Kariithi Githinji**
+- Github: [@sergiocortessat](https://github.com/sergiocortessat)
+- Twitter: [@sergiocortessat](https://twitter.com/sergiocortessat)
 
-- GitHub:[@karvel-code](https://github.com/karvel-code)
-- Linkedin:[@elvis-githinji-9a5032164](https://www.linkedin.com/in/elvis-githinji-9a5032164/)
+
 
 Project Link: [Bubble Sort Ruby](https://github.com/billodiallo/bubble_sort/tree/feature-b)
 
