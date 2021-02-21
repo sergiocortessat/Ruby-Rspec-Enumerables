@@ -1,9 +1,9 @@
-# Enumerables
+# Rspec-Enumerables
 
 ## Table of Contents
 
 * [About the Project](#about-the-project)
-  * [Built With](#built-with)
+* [Built With](#built-with)
 * [Contributing](#contributing)
 * [Contact](#contact)
 * [Acknowledgements](#acknowledgements)
@@ -12,17 +12,21 @@
 
 <!-- ABOUT THE PROJECT   -->
 ## About The Project
-In this project, we develop the already existing Ruby enumerable methods such as #each and many others, using our existing knowledge of important concepts in Ruby. 
+In this project, we are testing over the enumerable methods created. Passing different corner case test to make sure the program runs as expected. 
 
-## Screenshot
-- testing
+## Screenshot Test
 
-![enumerable_shot](https://user-images.githubusercontent.com/11162987/108513902-3ef7ea00-72d4-11eb-8ba7-c9028507f82f.PNG)
+<p align="center">
+  <img height="auto" src="https://user-images.githubusercontent.com/11162987/108513902-3ef7ea00-72d4-11eb-8ba7-c9028507f82f.PNG">
+</p>
 
-![Screenshot]()
+<p align="center">
+<img height="auto" src="rspec_enumerables.gif">
+</p>
+
 ### Built With
 
-* [RUBY](https://github.com/billodiallo/project2-enumerable/tree/feature-enum)
+* [RUBY](https://github.com/sergiocortessat/Ruby-Rspec-Enumerables/tree/rspec)
 
 ## Contributing
 
@@ -36,7 +40,7 @@ This is an example of how you may give instructions on setting up your project l
 - Clone this repository with git clone ```https://github.com/sergiocortessat/Ruby-Rspec-Enumerables.git``` using your terminal or command line.
 - Change to the project directory by entering :
 ```cd Ruby-Rspec-Enumerables``` in the terminal .
-- run the command ```ruby Ruby-Rspec-Enumerables```
+- run the command ```ruby enumerables.rb```
 
 ## Prequisites
 
@@ -53,13 +57,15 @@ In this project the testing was done using RSpec to test all enumerable  methods
 - Inside spec folder you'll see a spec_helper.rb file.
 
 ## Run
-We have already created rspec-testing files called logic.rb, and settings.rb.
-- go to the folder inside your terminal type rspec
-- If all test pass you will see:
- `26 examples, 0 failures` for spec_enumerable.rb
+The testing file is included in spec folder under rspec_enumerables.rb.
+- go to the folder spec: 
+- cd spec
+- Inside your terminal type: 
+- rspec spec_enumerables.rb
+- All test should pass and you shall see:
+
+ - `26 examples, 0 failures` for spec_enumerable.rb
  
-<!-- CONTACT -->
-## Contact
 
 ## Authors
 
@@ -76,7 +82,7 @@ We have already created rspec-testing files called logic.rb, and settings.rb.
 
 
 
-Project Link: [Bubble Sort Ruby](https://github.com/billodiallo/bubble_sort/tree/feature-b)
+Project Link: [Rspec_enumerables Ruby](https://github.com/sergiocortessat/Ruby-Rspec-Enumerables/issues/2)
 
 
 <!-- ACKNOWLEDGEMENTS -->

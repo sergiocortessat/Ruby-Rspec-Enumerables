@@ -2,13 +2,13 @@
 require_relative '../enumerable'
 
 describe Enumerable do
-  arr1 = [1, 2, 5, 7, 9]
-  arr2 = ['hi', 'hello', 'bybye', true, false]
-  arr3 = %w[Sharon Leo Leila Brian Arun]
-  arr4 = %w[ant bear cat]
-  map_arr = ['small Pizza', 'small garlic bread', 'small milkshake']
-  test_proc = proc { |i| i * i }
-  negativetest = ['ih', 'llehe', 'www', false, true]
+  let(:arr1) { [1, 2, 5, 7, 9] }
+  let(:arr2) { ['hi', 'hello', 'bybye', true, false] }
+  let(:arr3) { %w[Sharon Leo Leila Brian Arun] }
+  let(:arr4) { %w[ant bear cat] }
+  let(:map_arr) { ['small Pizza', 'small garlic bread', 'small milkshake'] }
+  let(:test_proc) { proc { |i| i * i } }
+  let(:negativetest) {['pp', 'ww', 'mm', true, false]}
 
   describe '#my_each' do
     it 'in this it should return an array ' do
@@ -18,7 +18,7 @@ describe Enumerable do
       expect(arr2.my_each { |y| }).to eql(['hi', 'hello', 'bybye', true, false])
     end
     it 'this one should print the negative scenarios' do
-      expect(negativetest.my_each { |y| }).not_to eql(['pp', 'ww', 'mm', true, false])
+      expect(negativetest.my_each { |y| }).not_to eql(['sergio', 'billo', 'lorem', false, true])
     end
   end
 
@@ -26,10 +26,6 @@ describe Enumerable do
     it ' this test case return an array' do
       expect(arr1.my_each_with_index { |x| }).to eql(arr1)
     end
-    it ' this test case is the negative scenario' do
-      expect(arr1.my_each_with_index { |x| }).not_to eql(arr3)
-    end
-    
   end
 
   describe '#my_select' do
