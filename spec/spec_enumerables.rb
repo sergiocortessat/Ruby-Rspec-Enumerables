@@ -95,16 +95,28 @@ describe Enumerable do
     it 'It should return true as none of the elemnts inside comply with the condition' do
       expect(arr4.my_none? { |x| x.length >= 5 }).to be true
     end
+    it 'negative scenario' do
+      expect(arr4.my_none? { |x| x.length >= 5 }).not_to be false
+    end
 
     it 'It should return false as one of  elemnts inside has a true value  to comply with the condition' do
       expect(arr4.my_none? { |x| x.length >= 4 }).to be false
+    end
+    it 'negative scenario' do
+      expect(arr4.my_none? { |x| x.length >= 4 }).not_to be true
     end
 
     it 'It should return true as none  of the element are integer' do
       expect(arr4.my_none?(Integer)).to be true
     end
+    it 'negative scenario' do
+      expect(arr4.my_none?(Integer)).not_to be false
+    end
     it 'It should return true as none  of the element are integer' do
       expect([nil, false, true].my_none?).to be false
+    end
+    it 'negative scenario' do
+      expect([nil, false, true].my_none?).not_to be true
     end
   end
 
