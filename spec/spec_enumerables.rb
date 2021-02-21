@@ -45,9 +45,15 @@ describe Enumerable do
     it 'It should return true as all the elemnts inside comply with the condition' do
       expect(arr4.my_all? { |x| x.length >= 2 }).to be true
     end
+    it 'negative scenario' do
+      expect(arr4.my_all? { |x| x.length >= 2 }).not_to be false
+    end
 
     it 'It should return false as not all the elemnts inside comply with the condition' do
       expect(arr4.my_all? { |x| x.length >= 4 }).to be false
+    end
+    it 'negative scenario' do
+      expect(arr4.my_all? { |x| x.length >= 4 }).not_to be true
     end
     it 'It should return negative scenario' do
       expect(arr4.my_all? { |x| x.length >= 4 }).not_to be true
@@ -56,20 +62,33 @@ describe Enumerable do
     it 'It should return false as all the elemnts inside are not of the type String' do
       expect([1, 2i, 3.14].my_all?(String)).to be false
     end
+    it 'negative scenario' do
+      expect([1, 2i, 3.14].my_all?(String)).not_to be true
+    end
   end
 
   describe '#my_any?' do
     it 'It should return true as one of the elemnts inside comply with the condition' do
       expect(arr4.my_any? { |x| x.length >= 3 }).to be true
     end
+    it 'negative scenario' do
+      expect(arr4.my_any? { |x| x.length >= 3 }).not_to be false
+    end
 
     it 'It should return false as any elemnts inside has a true value  tocomply with the condition' do
       expect(arr4.my_any? { |x| x.length >= 7 }).to be false
     end
+    it 'negative scenario' do
+      expect(arr4.my_any? { |x| x.length >= 7 }).not_to be true
+    end
 
-    it 'It should return false as an empty array does not compute to any true value' do
+    it 'It should return false as an negative scenario' do
       expect([].my_any?).not_to be true
     end
+    it 'postive scenario scenario' do
+      expect([].my_any?).to be false
+    end
+    
   end
 
   describe '#my_none?' do
