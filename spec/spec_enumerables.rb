@@ -8,13 +8,17 @@ describe Enumerable do
   arr4 = %w[ant bear cat]
   map_arr = ['small Pizza', 'small garlic bread', 'small milkshake']
   test_proc = proc { |i| i * i }
+  negativetest = ['ih', 'llehe', 'www', false, true]
 
   describe '#my_each' do
-    it 'in this it should return  ' do
+    it 'in this it should return an array ' do
       expect(arr1.my_each { |x| }).to eql([1, 2, 5, 7, 9])
     end
     it 'this one should print another array' do
       expect(arr2.my_each { |y| }).to eql(['hi', 'hello', 'bybye', true, false])
+    end
+    it 'this one should print the negative scenarios' do
+      expect(negativetest.my_each { |y| }).not_to eql(['pp', 'ww', 'mm', true, false])
     end
   end
 
@@ -22,10 +26,7 @@ describe Enumerable do
     it ' this test case return an array' do
       expect(arr1.my_each_with_index { |x| }).to eql(arr1)
     end
-    # it ' this should print an even ' do
-    # expect(arr3.my_each_with_index { |x, y| x if y%2 == 0 }).to eql(['Sharon','Leila',
-    #     'Arun'])
-    # end
+    
   end
 
   describe '#my_select' do
