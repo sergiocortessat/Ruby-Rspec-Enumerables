@@ -124,13 +124,22 @@ describe Enumerable do
     it 'It should return the number of element ' do
       expect(arr2.my_count).to eql(5)
     end
+    it 'negative scenario of It should return the number of element ' do
+      expect(arr2.my_count).not_to eql(7)
+    end
 
     it ' It should return count if it is even element' do
       expect(arr1.my_count { |x| (x % 2).zero? }).to eql(1)
     end
+    it ' negative scenario ,It should return count if it is even element' do
+      expect(arr1.my_count { |x| (x % 2).zero? }).not_to eql(2)
+    end
 
     it ' It should return 1 as there is one Leo in the list' do
       expect(arr3.my_count('Leo')).to eql(1)
+    end
+    it ' neagtive scenario ,It should return 1 as there is one Leo in the list' do
+      expect(arr3.my_count('Leo')).not_to eql(3)
     end
   end
 
@@ -140,13 +149,24 @@ describe Enumerable do
                x.gsub('small', 'large')
              end).to eql(['large Pizza', 'large garlic bread', 'large milkshake'])
     end
+    it 'negative scenario, It should return the map_array with modified size to large ' do
+      expect(map_arr.my_map do |x|
+               x.gsub('small', 'large')
+             end).not_to eql([' Pizza', ' garlic bread', ' milkshake'])
+    end
 
     it ' It should return the modified array with numbers multiply i*i' do
       expect(arr1.my_map(test_proc) { |i| i }).to eql([1, 4, 25, 49, 81])
     end
+    it ' negative scenario ,It should return the modified array with numbers multiply i*i' do
+      expect(arr1.my_map(test_proc) { |i| i }).not_to eql([2, 6, 28, 39, 91])
+    end
 
     it ' It should return the modified array with numnbers sum +10' do
       expect(arr1.my_map { |x| x + 10 }).to eql([11, 12, 15, 17, 19])
+    end
+    it ' neagtive scenario, It should return the modified array with numnbers sum +10' do
+      expect(arr1.my_map { |x| x + 10 }).not_to eql([15, 16, 18, 19, 29])
     end
   end
 
@@ -154,13 +174,22 @@ describe Enumerable do
     it 'It should return the total sum of of i[n] + i[n+1] of the array' do
       expect(arr1.my_inject { |x, y| x * y }).to eql(630)
     end
+    it 'negative scenario, It should return the total sum of of i[n] + i[n+1] of the array' do
+      expect(arr1.my_inject { |x, y| x * y }).not_to eql(209)
+    end
 
     it 'It should return the longest string in the array' do
       expect(arr4.my_inject { |memo, word| memo.length > word.length ? memo : word }).to eql('bear')
     end
+    it 'negative scenario, It should return the longest string in the array' do
+      expect(arr4.my_inject { |memo, word| memo.length > word.length ? memo : word }).not_to eql('juice')
+    end
 
     it 'It should return 1 as 1 to the power of anything is equal to 1' do
       expect(arr1.my_inject { |z, w| z**w }).to eql(1)
+    end
+    it 'negative scenario, It should return 1 as 1 to the power of anything is equal to 1' do
+      expect(arr1.my_inject { |z, w| z**w }).not_to eql(3)
     end
   end
 
@@ -168,9 +197,15 @@ describe Enumerable do
     it 'It should return the total multiplication of i[n] * i[n+1] of the array' do
       expect(multiply_els([1, 2, 4])).to eql(8)
     end
+    it ' negative scenario, It should return the total multiplication of i[n] * i[n+1] of the array' do
+      expect(multiply_els([1, 2, 4])).not_to eql(10)
+    end
 
     it 'It should return the total multiplication of i[n] * i[n+1] of the array' do
       expect(multiply_els([3, 5, 8])).to eql([3, 5, 8].inject { |a, b| a * b })
+    end
+    it 'megative scenario, It should return the total multiplication of i[n] * i[n+1] of the array' do
+      expect(multiply_els([3, 5, 8])).not_to eql([4, 6, 9].inject { |a, b| a * b })
     end
   end
 end
