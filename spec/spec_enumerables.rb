@@ -26,6 +26,9 @@ describe Enumerable do
     it ' this test case return an array' do
       expect(arr1.my_each_with_index { |x| }).to eql(arr1)
     end
+    it ' this test case is the negative scenario' do
+      expect(arr1.my_each_with_index { |x| }).not_to eql(arr3)
+    end
     
   end
 
