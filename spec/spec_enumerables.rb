@@ -26,6 +26,9 @@ describe Enumerable do
     it ' this test case return an array' do
       expect(arr1.my_each_with_index { |x| }).to eql(arr1)
     end
+    it ' this test case return an array with negative scenario ' do
+      expect(arr1.my_each_with_index { |x| }).not_to eql([3, 5, 4, 7, 9])
+    end
   end
 
   describe '#my_select' do
@@ -33,7 +36,7 @@ describe Enumerable do
       expect(arr3.my_select { |x| x != 'Brian' }).to eql(%w[Sharon Leo Leila Arun])
     end
 
-    it 'test to check if the return is wrong as Sharon shouldnt be returned' do
+    it 'test to check if the return is wrong as Sharon shouldnt be returned ,also it is a negative scenario' do
       expect(arr3.my_select { |y| y != 'Sharon' }).not_to eql(%w[Sharon Leo Leila Arun])
     end
   end
@@ -45,6 +48,9 @@ describe Enumerable do
 
     it 'It should return false as not all the elemnts inside comply with the condition' do
       expect(arr4.my_all? { |x| x.length >= 4 }).to be false
+    end
+    it 'It should return negative scenario' do
+      expect(arr4.my_all? { |x| x.length >= 4 }).not_to be true
     end
 
     it 'It should return false as all the elemnts inside are not of the type String' do
