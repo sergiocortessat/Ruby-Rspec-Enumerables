@@ -106,7 +106,7 @@ describe Enumerable do
     it 'It should return true as none  of the element are integer' do
       expect(arr4.my_none?(Integer)).to be true
     end
-    it 'It should return true as none  of the element are integer It should return true as none  of the element are integer' do
+    it 'It should return true as none  of the element are integer' do
       expect(arr4.my_none?(Integer)).not_to be false
     end
     it 'It should return true as none  of the element are integer' do
