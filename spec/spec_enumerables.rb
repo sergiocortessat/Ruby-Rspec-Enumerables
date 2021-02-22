@@ -8,7 +8,7 @@ describe Enumerable do
   let(:arr4) { %w[ant bear cat] }
   let(:map_arr) { ['small Pizza', 'small garlic bread', 'small milkshake'] }
   let(:test_proc) { proc { |i| i * i } }
-  let(:negativetest) {['pp', 'ww', 'mm', true, false]}
+  let(:negativetest) { ['pp', 'ww', 'mm', true, false] }
 
   describe '#my_each' do
     it 'in this it should return an array ' do
@@ -88,7 +88,6 @@ describe Enumerable do
     it 'postive scenario scenario' do
       expect([].my_any?).to be false
     end
-    
   end
 
   describe '#my_none?' do
