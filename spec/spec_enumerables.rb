@@ -106,13 +106,13 @@ describe Enumerable do
     it 'It should return true as none  of the element are integer' do
       expect(arr4.my_none?(Integer)).to be true
     end
-    it 'It should return true as none  of the element are integer asserted to not_to eq' do
+    it 'It should return true as none  of the element are integer It should return true as none  of the element are integer' do
       expect(arr4.my_none?(Integer)).not_to be false
     end
     it 'It should return true as none  of the element are integer' do
       expect([nil, false, true].my_none?).to be false
     end
-    it 'negative scenario' do
+    it 'It should return true as none  of the element are integer asserted to a not_to eq ' do
       expect([nil, false, true].my_none?).not_to be true
     end
   end
