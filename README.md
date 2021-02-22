@@ -17,7 +17,7 @@ In this project, we are testing over the enumerable methods created. Passing dif
 ## Screenshot Test
 
 <p align="center">
-  <img height="auto" src="https://user-images.githubusercontent.com/11162987/108513902-3ef7ea00-72d4-11eb-8ba7-c9028507f82f.PNG">
+  <img height="auto" src="Screenshot.png">
 </p>
 
 <p align="center">
@@ -64,7 +64,7 @@ The testing file is included in spec folder under rspec_enumerables.rb.
 - rspec spec_enumerables.rb
 - All test should pass and you shall see:
 
- - `26 examples, 0 failures` for spec_enumerable.rb
+ - `50 examples, 0 failures` for spec_enumerable.rb
  
 
 ## Authors
