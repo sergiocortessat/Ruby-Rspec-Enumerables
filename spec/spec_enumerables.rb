@@ -16,7 +16,7 @@ describe Enumerable do
       expect(arr2.my_each { |y| }).to eql(['hi', 'hello', 'bybye', true, false])
     end
     it 'this one should print the negative scenarios' do
-      expect(negativetest.my_each { |y| }).not_to eql(['sergio', 'billo', 'lorem', false, true])
+      expect(negativetest.my_each { |z| }).not_to eql(['sergio', 'billo', 'lorem', false, true])
     end
   end
 
@@ -25,7 +25,7 @@ describe Enumerable do
       expect(arr1.my_each_with_index { |x| }).to eql(arr1)
     end
     it ' this test case return an array with negative scenario ' do
-      expect(arr1.my_each_with_index { |x| }).not_to eql([3, 5, 4, 7, 9])
+      expect(arr1.my_each_with_index { |y| }).not_to eql([3, 5, 4, 7, 9])
     end
   end
 
@@ -43,14 +43,14 @@ describe Enumerable do
     it 'It should return true as all the elemnts inside comply with the condition' do
       expect(arr4.my_all? { |x| x.length >= 2 }).to be true
     end
-    it 'negative scenario' do
+    it 'It should return true as all the elemnts inside comply with the condition asserted to not_to eq' do
       expect(arr4.my_all? { |x| x.length >= 2 }).not_to be false
     end
 
     it 'It should return false as not all the elemnts inside comply with the condition' do
       expect(arr4.my_all? { |x| x.length >= 4 }).to be false
     end
-    it 'negative scenario' do
+    it 'It should return true as all the elemnts inside comply with the condition asserted to not_to eq' do
       expect(arr4.my_all? { |x| x.length >= 4 }).not_to be true
     end
     it 'It should return negative scenario' do
@@ -76,7 +76,7 @@ describe Enumerable do
     it 'It should return false as any elemnts inside has a true value  tocomply with the condition' do
       expect(arr4.my_any? { |x| x.length >= 7 }).to be false
     end
-    it 'negative scenario' do
+    it 'It should return false as any elemnts inside has a true value but asserted to not_to equ' do
       expect(arr4.my_any? { |x| x.length >= 7 }).not_to be true
     end
 
@@ -92,21 +92,21 @@ describe Enumerable do
     it 'It should return true as none of the elemnts inside comply with the condition' do
       expect(arr4.my_none? { |x| x.length >= 5 }).to be true
     end
-    it 'negative scenario' do
+    it 'It should return true as none of the elemnts inside comply with the condition asserted to not_to eq' do
       expect(arr4.my_none? { |x| x.length >= 5 }).not_to be false
     end
 
     it 'It should return false as one of  elemnts inside has a true value  to comply with the condition' do
       expect(arr4.my_none? { |x| x.length >= 4 }).to be false
     end
-    it 'negative scenario' do
+    it 'It should return false as one of the elemnts inside comply with the condition asserted to not_to eq' do
       expect(arr4.my_none? { |x| x.length >= 4 }).not_to be true
     end
 
     it 'It should return true as none  of the element are integer' do
       expect(arr4.my_none?(Integer)).to be true
     end
-    it 'negative scenario' do
+    it 'It should return true as none  of the element are integer asserted to not_to eq' do
       expect(arr4.my_none?(Integer)).not_to be false
     end
     it 'It should return true as none  of the element are integer' do
